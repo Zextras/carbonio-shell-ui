@@ -6,6 +6,7 @@
  */
 
 import { ComponentType, FC } from 'react';
+import { Board } from '../boards';
 import { QueryChip } from '../search/items';
 
 export type CarbonioModule = {
@@ -68,7 +69,9 @@ export type CarbonioAccessoryView<P> = {
 export type PrimaryBarComponentProps = { active: boolean };
 export type SecondaryBarComponentProps = { expanded: boolean };
 export type AppViewComponentProps = {};
-export type BoardViewComponentProps = {};
+export type BoardViewComponentProps = {
+	windowHistory: History;
+};
 export type SettingsViewProps = {};
 export type SearchViewProps = {
 	useQuery: () => [QueryChip[], Function];
